@@ -30,8 +30,7 @@
             heading: 'Master Berita',
             subheading: 'Halaman untuk mengelola data berita.',
             icon: 'pe-7s-news-paper icon-gradient bg-happy-itmeo',
-            addlink: `name: 'tambah-berita'`,
-
+            addlink: 'berita/add',
 
             fields: ['first_name', 'last_name', 'age'],
             items: [{

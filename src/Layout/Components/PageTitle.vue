@@ -15,7 +15,7 @@
             </div>
             <div class="page-title-actions">
                 <button type="button" class="btn-shadow d-inline-flex align-items-center btn btn-success">
-                    <router-link :to="{addlink}">
+                    <router-link :to="addlink">
                         <font-awesome-icon class="mr-2" icon="plus"/>
                         Create New
                     </router-link>
