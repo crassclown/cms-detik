@@ -9,16 +9,12 @@ export default new Router({
     },
     routes: [
 
-        // Dashboards
-
-        {
-            path: '/',
-            name: 'analytics',
-            component: () => import('../DemoPages/Dashboards/Analytics.vue'),
-        },
-
         // Pages
-
+        {
+            path: '/master/berita',
+            name: 'master-berita',
+            component: () => import('../Master/Berita/Index.vue'),
+        },
         {
             path: '/pages/login-boxed',
             name: 'login-boxed',
