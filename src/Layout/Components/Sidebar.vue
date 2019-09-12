@@ -66,7 +66,7 @@
                         child: [
                             {
                                 title: 'Berita',
-                                href: '/forms/berita',
+                                href: '/master/berita',
                             },
                         ],
                     },
