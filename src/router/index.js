@@ -16,19 +16,19 @@ export default new Router({
             component: () => import('../Master/Berita/Index.vue'),
         },
         {
-            path: '/pages/login-boxed',
+            path: '/pages/login',
             name: 'login-boxed',
             meta: {layout: 'userpages'},
             component: () => import('../DemoPages/UserPages/LoginBoxed.vue'),
         },
         {
-            path: '/pages/register-boxed',
+            path: '/pages/register',
             name: 'register-boxed',
             meta: {layout: 'userpages'},
             component: () => import('../DemoPages/UserPages/RegisterBoxed.vue'),
         },
         {
-            path: '/pages/forgot-password-boxed',
+            path: '/pages/forgot-password',
             name: 'forgot-password-boxed',
             meta: {layout: 'userpages'},
             component: () => import('../DemoPages/UserPages/ForgotPasswordBoxed.vue'),
