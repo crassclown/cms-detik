@@ -1,6 +1,6 @@
 <template>
     <div>
-        <page-title :heading=heading :subheading=subheading :icon=icon></page-title>
+        <page-title :heading=heading :subheading=subheading :icon=icon :addlink=addlink></page-title>
         <b-card title="Bootstrap Table Options" class="main-card mb-4">
             <b-form-checkbox v-model="striped">Striped</b-form-checkbox>
             <b-form-checkbox v-model="bordered">Bordered</b-form-checkbox>
@@ -30,6 +30,8 @@
             heading: 'Master Berita',
             subheading: 'Halaman untuk mengelola data berita.',
             icon: 'pe-7s-news-paper icon-gradient bg-happy-itmeo',
+            addlink: `name: 'tambah-berita'`,
+
 
             fields: ['first_name', 'last_name', 'age'],
             items: [{

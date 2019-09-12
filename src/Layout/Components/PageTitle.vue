@@ -15,8 +15,10 @@
             </div>
             <div class="page-title-actions">
                 <button type="button" class="btn-shadow d-inline-flex align-items-center btn btn-success">
-                    <font-awesome-icon class="mr-2" icon="plus"/>
-                    Create New
+                    <router-link :to="{addlink}">
+                        <font-awesome-icon class="mr-2" icon="plus"/>
+                        Create New
+                    </router-link>
                 </button>
             </div>
         </div>
@@ -44,7 +46,7 @@
             icon: String,
             heading: String,
             subheading: String,
-
+            addlink: String,
         }
     }
 </script>
