@@ -16,6 +16,11 @@ export default new Router({
             component: () => import('../Master/Berita/Index.vue'),
         },
         {
+            path: '/master/berita/add',
+            name: 'tambah-berita',
+            component: () => import('../Master/Berita/Add.vue'),
+        },
+        {
             path: '/pages/login',
             name: 'login-boxed',
             meta: {layout: 'userpages'},
