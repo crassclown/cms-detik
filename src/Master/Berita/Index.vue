@@ -27,9 +27,9 @@
             PageTitle,
         },
         data: () => ({
-            heading: 'Regular Tables',
-            subheading: 'Tables are the backbone of almost all web applications.',
-            icon: 'pe-7s-drawer icon-gradient bg-happy-itmeo',
+            heading: 'Master Berita',
+            subheading: 'Halaman untuk mengelola data berita.',
+            icon: 'pe-7s-news-paper icon-gradient bg-happy-itmeo',
 
             fields: ['first_name', 'last_name', 'age'],
             items: [{
