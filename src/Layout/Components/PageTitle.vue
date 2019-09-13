@@ -14,12 +14,14 @@
                 </div>
             </div>
             <div class="page-title-actions">
-                <router-link :to="addlink">
-                    <button type="button" class="btn-shadow d-inline-flex align-items-center btn btn-success">
-                        <font-awesome-icon class="mr-2" icon="plus"/>
-                        Create New
-                    </button>
-                </router-link>
+                <div v-if="addlink">
+                    <router-link :to="addlink">
+                        <button type="button" class="btn-shadow d-inline-flex align-items-center btn btn-success">
+                            <font-awesome-icon class="mr-2" icon="plus"/>
+                            Create New
+                        </button>
+                    </router-link>
+                </div>
             </div>
         </div>
     </div>

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <page-title :heading=heading :subheading=subheading :icon=icon></page-title>
+        <page-title :heading=heading :subheading=subheading :icon=icon :addlink=addlink></page-title>
         <div class="row">
             <div class="col-md-6">
                 <div class="main-card mb-3 card">
@@ -393,14 +393,12 @@
     export default {
         components: {
             PageTitle,
-
         },
         data: () => ({
             heading: 'Form Controls',
             subheading: 'Wide selection of forms controls, using the Bootstrap 4 code base, but built with Vue.',
             icon: 'pe-7s-display1 icon-gradient bg-premium-dark',
+            addlink: ''
         }),
-
-
     }
 </script>
