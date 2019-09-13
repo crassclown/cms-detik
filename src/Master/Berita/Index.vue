@@ -1,6 +1,9 @@
 <template>
     <div>
         <page-title :heading=heading :subheading=subheading :icon=icon :addlink=addlink></page-title>
+        <div v-for="currency in info" :key="currency.index">
+            {{currency.description}}
+        </div>
         <b-card title="Bootstrap Table Options" class="main-card mb-4">
             <b-form-checkbox v-model="striped">Striped</b-form-checkbox>
             <b-form-checkbox v-model="bordered">Bordered</b-form-checkbox>
@@ -56,11 +59,19 @@
             hover: false,
             dark: false,
             fixed: false,
-            footClone: false
+            footClone: false,
+            info: '',
         }),
-
+        mounted() {
+            this.getCurrency()
+        },
         methods: {
-
+            getCurrency(){
+                this.$http
+                    .get('https://api.coindesk.com/v1/bpi/currentprice.json')
+                    .then(response => (this.info = response.data.bpi))
+                    .catch(error => console.log(error))
+            }
         }
     }
 </script>
