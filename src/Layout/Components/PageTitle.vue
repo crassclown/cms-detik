@@ -14,12 +14,12 @@
                 </div>
             </div>
             <div class="page-title-actions">
-                <button type="button" class="btn-shadow d-inline-flex align-items-center btn btn-success">
-                    <router-link :to="addlink">
+                <router-link :to="addlink">
+                    <button type="button" class="btn-shadow d-inline-flex align-items-center btn btn-success">
                         <font-awesome-icon class="mr-2" icon="plus"/>
                         Create New
-                    </router-link>
-                </button>
+                    </button>
+                </router-link>
             </div>
         </div>
     </div>
@@ -50,3 +50,13 @@
         }
     }
 </script>
+
+<style lang="stylus" scoped>
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    a:hover{
+        color: white;
+    }
+</style>
