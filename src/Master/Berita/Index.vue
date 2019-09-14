@@ -4,17 +4,7 @@
         <div v-for="currency in info" :key="currency.index">
             {{currency.description}}
         </div>
-        <b-card title="Bootstrap Table Options" class="main-card mb-4">
-            <b-form-checkbox v-model="striped">Striped</b-form-checkbox>
-            <b-form-checkbox v-model="bordered">Bordered</b-form-checkbox>
-            <b-form-checkbox v-model="outlined">Outlined</b-form-checkbox>
-            <b-form-checkbox v-model="small">Small</b-form-checkbox>
-            <b-form-checkbox v-model="hover">Hover</b-form-checkbox>
-            <b-form-checkbox v-model="dark">Dark</b-form-checkbox>
-            <b-form-checkbox v-model="fixed">Fixed</b-form-checkbox>
-            <b-form-checkbox v-model="footClone">Foot Clone</b-form-checkbox>
-        </b-card>
-        <b-card title="Example" class="main-card mb-4">
+        <b-card title="List Berita" class="main-card mb-4">
             <b-table :striped="striped" :bordered="bordered" :outlined="outlined" :small="small" :hover="hover"
                 :dark="dark" :fixed="fixed" :foot-clone="footClone" :items="items" :fields="fields">
             </b-table>
@@ -35,21 +25,24 @@
             icon: 'pe-7s-news-paper icon-gradient bg-happy-itmeo',
             addlink: 'berita/add',
 
-            fields: ['first_name', 'last_name', 'age'],
+            fields: ['title', 'summary', 'tanggal_dibuat', 'penulis'],
             items: [{
-                    age: 40,
-                    first_name: 'Dickerson',
-                    last_name: 'Macdonald'
+                    title: 'Enma',
+                    summary: 'pedang super',
+                    tanggal_dibuat: '13 September 2019',
+                    penulis: 'Oda'
                 },
                 {
-                    age: 21,
-                    first_name: 'Larsen',
-                    last_name: 'Shaw'
+                    title: 'Shusui',
+                    summary: 'pedang hitam',
+                    tanggal_dibuat: '12 September 2019',
+                    penulis: 'Oda'
                 },
                 {
-                    age: 89,
-                    first_name: 'Geneva',
-                    last_name: 'Wilson'
+                    title: 'Samehada',
+                    summary: 'pedang hiu',
+                    tanggal_dibuat: '10 September 2019',
+                    penulis: 'Kishimoto'
                 }
             ],
             striped: false,
