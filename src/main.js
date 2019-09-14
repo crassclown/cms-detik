@@ -4,6 +4,7 @@ import Axios from 'axios'
 import VueAxios from 'vue-axios'
 
 import BootstrapVue from "bootstrap-vue"
+import CKEditor from '@ckeditor/ckeditor5-vue';
 
 import App from './App'
 
@@ -14,7 +15,7 @@ Vue.prototype.$http = Axios;
 
 Vue.config.productionTip = false;
 
-Vue.use(BootstrapVue, VueAxios);
+Vue.use(BootstrapVue, VueAxios, CKEditor);
 
 Vue.component('default-layout', Default);
 Vue.component('userpages-layout', Pages);
