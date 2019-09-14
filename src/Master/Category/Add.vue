@@ -8,9 +8,9 @@
                         <form @submit.prevent='AddCategory'>
                             <div class="position-relative form-group"><label for="name"
                                     class="">Name</label><input name="name" id="name"
-                                    placeholder="Category Name" type="text" class="form-control" autocomplete="off">
+                                    placeholder="Category Name" type="text" class="form-control" autocomplete="off" v-model="category.name">
                             </div>
-                            <div class="position-relative form-group"><label for="description" class="">Description</label><textarea name="description" id="description" class="form-control"></textarea>
+                            <div class="position-relative form-group"><label for="description" class="">Description</label><textarea name="description" id="description" class="form-control" v-model="category.description"></textarea>
                             </div>
                             <button class="mt-1 btn btn-primary" type="submit">Submit</button>
                         </form>
@@ -36,7 +36,10 @@
             addlink: '',
             category: {
                 name: '',
-                description: ''
+                description: '',
+                is_active: 1,
+                created_by: 1,
+                create_date: Date.now()
             }
             // editor: ClassicEditor,
             // editorData: '<p>Content of the editor.</p>',
@@ -46,7 +49,7 @@
         }),
         methods: {  
             AddCategory(){
-                axios.post('http://localhost:8000/api/category', this.$data.category)
+                this.$http.post('http://localhost:8000/api/category', this.$data.category)
                     .then((response) => {
                         this.$swal({
                             title: 'Data kategori berhasil diinput',
