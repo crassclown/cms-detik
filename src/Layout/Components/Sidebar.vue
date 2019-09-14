@@ -65,6 +65,10 @@
                         title: 'Master',
                         child: [
                             {
+                                title: 'Category',
+                                href: '/master/category',
+                            },
+                            {
                                 title: 'Berita',
                                 href: '/master/berita',
                             },

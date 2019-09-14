@@ -21,6 +21,16 @@ export default new Router({
             component: () => import('../Master/Berita/Add.vue'),
         },
         {
+            path: '/master/category',
+            name: 'master-category',
+            component: () => import('../Master/Category/Index.vue'),
+        },
+        {
+            path: '/master/category/add',
+            name: 'tambah-category',
+            component: () => import('../Master/Category/Add.vue'),
+        },
+        {
             path: '/pages/login',
             name: 'login-boxed',
             meta: {layout: 'userpages'},
