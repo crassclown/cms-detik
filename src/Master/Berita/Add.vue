@@ -10,13 +10,9 @@
                                     class="">Title</label><input name="title" id="title"
                                     placeholder="News Title" type="text" class="form-control" autocomplete="off">
                             </div>
-                            <div class="position-relative form-group"><label for="summary" class="">Summary</label><textarea name="summary" id="summary" class="form-control"></textarea>
+                            <div class="position-relative form-group"><label for="category_id" class="">Category</label><b-form-select v-model="selected" :options="options"></b-form-select>
                             </div>
                             <div class="position-relative form-group"><label for="detail" class="">Detail</label><textarea name="detail" id="detail" class="form-control"></textarea>
-                            </div>
-                            <div class="position-relative form-group"><label for="writer"
-                                    class="">Writer</label><input name="writer" id="writer"
-                                    placeholder="News Writer" type="text" class="form-control" autocomplete="off">
                             </div>
                             <button class="mt-1 btn btn-primary">Submit</button>
                         </form>
@@ -40,11 +36,28 @@
             subheading: 'Halaman untuk menambah data berita',
             icon: 'pe-7s-display1 icon-gradient bg-premium-dark',
             addlink: '',
+            selected: null,
+            options: [],
+            category: '',
             // editor: ClassicEditor,
             // editorData: '<p>Content of the editor.</p>',
             // editorConfig: {
             //     // The configuration of the editor.
             // }
         }),
+        mounted() {
+            this.getCurrency()
+        },
+        methods: {
+            getCurrency() {
+                this.$http
+                    .get('http://localhost:8000/api/category')
+                    .then(response => (
+                            this.options.value = response.data.id,
+                            this.options.text = response.data.name
+                        ))
+                    .catch(error => console.log(error))
+            }
+        }
     }
 </script>
